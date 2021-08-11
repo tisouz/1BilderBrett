@@ -1,0 +1,15 @@
+.PreviewsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 128px);
+  grid-gap: 1.5rem;
+  justify-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (min-width: 700px) {
+  .PreviewsContainer {
+    max-width: 80%;
+  }
+}

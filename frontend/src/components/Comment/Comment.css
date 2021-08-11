@@ -1,0 +1,15 @@
+.CommentContent {
+  max-width: 90%;
+  word-wrap: break-word;
+  margin: 5px
+}
+
+@media (min-width: 700px) {
+  .CommentContent {
+    max-width: 70%;
+  }
+}
+
+.CommentAuthor {
+  color: #375a7f;
+}

@@ -1,0 +1,23 @@
+.PostContainer {
+  padding: 20px 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .PostContainer {
+    max-width: 80%;
+  }
+}
+
+video, img {
+  display: block;
+  margin: 0 auto;
+}
+
+.VideoContent {
+  max-height: 80vh;
+}
+
+.PostInteractionContainer {
+  padding: 0% 10%;
+}
