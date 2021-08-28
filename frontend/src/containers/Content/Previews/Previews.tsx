@@ -34,9 +34,9 @@ const Previews = () => {
 
   //infinite scroll
   const scrollHandler = (event: Event) => {
-    const height = (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    const realoadHeight = 0.8*(document.documentElement.scrollHeight - document.documentElement.clientHeight);
     const scrolled = document.body.scrollTop || document.documentElement.scrollTop;
-    if (scrolled === height && nextPreviews !== null && tokens !== null && !loading) {
+    if (scrolled >= realoadHeight && nextPreviews !== null && tokens !== null && !loading) {
       dispatch(fetchFurtherPreviews({ accessToken: tokens.accessToken, next: nextPreviews }));
     }
   }
