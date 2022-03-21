@@ -1,5 +1,5 @@
 import React from "react";
-import { FRONTEND_URL } from "../App";
+import { instance } from '../axios-content';
 import { browserName, isDesktop, isMobile } from "react-device-detect";
 import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,7 +52,7 @@ class AddToHomeScreen extends React.Component<Props, State> {
         msg = `
         Please follow these instructions to install the application
         1.  Clear browser cache
-        2.  Reload PWA Page ${FRONTEND_URL}
+        2.  Reload PWA Page ${instance.defaults.baseURL}
         3.  Tap the Share button
         4.  Tap "Add To Homescreen" option
         5.  Install application
@@ -63,7 +63,7 @@ class AddToHomeScreen extends React.Component<Props, State> {
         msg = `
         Please follow these instructions to install the application
         1.  Clear browser cache
-        2.  Reload PWA Page ${FRONTEND_URL}
+        2.  Reload PWA Page ${instance.defaults.baseURL}
         3.  Tap the menu button (three dots on top right)
         4.  Tap "Add To Homescreen" option
         5.  Install application

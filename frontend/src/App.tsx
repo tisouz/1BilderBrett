@@ -48,4 +48,3 @@ const App = () => {
 }
 
 export default App;
-export const FRONTEND_URL = "https://www.1bilderbrett.com";

@@ -85,7 +85,7 @@ registerRoute(
 
 registerRoute(
   ({ url }) =>
-    url.pathname.startsWith("/") && !url.pathname.startsWith("/backend"),
+    url.pathname.startsWith("/") && !url.pathname.startsWith("/api"),
   new StaleWhileRevalidate({
     cacheName: "frontend",
     plugins: [new PrecacheFallbackPlugin({fallbackURL:FALLBACK_URL})],
@@ -100,7 +100,7 @@ registerRoute(
  */
 
 registerRoute(
-  ({ url }) => url.pathname.startsWith("/backend"),
+  ({ url }) => url.pathname.startsWith("/api"),
   new NetworkOnly({
     plugins: [new PrecacheFallbackPlugin({fallbackURL:FALLBACK_URL})],
   })
