@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import TagSearch from '../containers/TagSearch';
+import AddToHomeScreen from "./AddToHomeScreen";
 
 interface NavbarProps {
   authenticated: boolean
@@ -53,6 +54,9 @@ const Navbar = ({ authenticated }: NavbarProps) => {
         </div>
 
         <div className='navbar-end'>
+          <div className="navbar-item px-1">
+            <AddToHomeScreen />
+          </div>
 
           {links}
 

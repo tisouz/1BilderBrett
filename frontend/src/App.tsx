@@ -12,6 +12,7 @@ import Previews from './containers/Content/Previews/Previews';
 import Post from './containers/Content/UserPost/Post';
 import Home from './containers/Home';
 import PostCreation from './components/PostCreation/PostCreation';
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   const tokens = useAppSelector((state) => state.auth.tokens);
@@ -39,6 +40,7 @@ const App = () => {
 
   return (
     <div className='App'>
+      <ToastContainer />
       <Navbar authenticated={isAuthenticated} />
       <Suspense fallback={<p>Loading...</p>}>{routes}</Suspense>
     </div>
