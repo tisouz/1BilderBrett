@@ -41,8 +41,8 @@ class AddToHomeScreen extends React.Component<Props, State> {
   //Show informations about install
   getInstallInfos() {
     //Only prompt once per session and if app is not launched in standalone mode
-    if (!sessionStorage.getItem("browserInfos") && !this.isInstalled()) {
-      sessionStorage.setItem("browserInfos", "installPrompted");
+    if (!localStorage.getItem("browserInfos") && !this.isInstalled()) {
+      localStorage.setItem("browserInfos", "installPrompted");
       let msg;
       //prompt exist. User can install app using the download button
       if (browserName === "Chrome" || browserName === "Edge") {
