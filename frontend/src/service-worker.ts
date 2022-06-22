@@ -80,7 +80,7 @@ registerRoute(
 
 registerRoute(
     ({ url }) =>
-        url.hostname.includes("www.1bilderbrett.com") &&
+        url.hostname.includes("1bilderbrett.com") &&
         url.pathname.startsWith("/") &&
         !url.pathname.startsWith("/api"),
     new StaleWhileRevalidate({
@@ -98,7 +98,7 @@ registerRoute(
 
 registerRoute(
     ({ url }) =>
-        url.hostname.includes("www.1bilderbrett.com") &&
+        url.hostname.includes("1bilderbrett.com") &&
         url.pathname.startsWith("/api"),
     new NetworkOnly({
         plugins: [new PrecacheFallbackPlugin({ fallbackURL: FALLBACK_URL })],
